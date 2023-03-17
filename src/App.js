@@ -1,5 +1,6 @@
 import './App.css';
-import { DisplayLocation } from './components/DisplayLocation';
+// naming convention for reusable components is to name component with "Item"
+import { CityItem } from './components/CityItem';
 
 function App() {
 // In the App.js
@@ -16,7 +17,7 @@ function App() {
     // EnglishName - string - represents the name of the state/county/area
     // EnglishType - string - represents the type (i.e. “State”, “County”, “Area”)
     // Values of each field can be random value, but make sure the type match above
-const cityInformation = [
+const cities = [
   {
     Key: "1",
     EnglishName: "Miskolc",
@@ -71,7 +72,7 @@ return (
     components start with capital letter) 
     {/* App.js should provide the array to the custom component as a props */}
     {/* custom component */}
-    <DisplayLocation cityInformation={cityInformation} />
+    <CityItem cities={cities} />
 
   </div>
 );

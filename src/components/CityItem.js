@@ -6,12 +6,11 @@
 //     ID of the AdministrativeArea 
 //     ID of the Country
 
-export function DisplayLocation(props) {
-    return props.cityInformation.map((cityEntry) => (
-      <ul key={cityEntry.Key}>
-        <li>{cityEntry.EnglishName},&nbsp;</li>
-        <li>{cityEntry.AdministrativeArea.ID},&nbsp;</li>
-        <li>{cityEntry.Country.ID}</li>
+export function CityItem({cities}) {
+    return cities.map((city) => (
+      // ul creates new line item, li creates bullet point
+      <ul key={city.Key}>
+        <li>{city.EnglishName}, {city.AdministrativeArea.ID}, {city.Country.ID}</li>
       </ul>
     ));
 }

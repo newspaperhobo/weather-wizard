@@ -6,10 +6,4 @@ label {
   padding-right: .5em;
 }
 
-ul {
-  display: flex;
-}
 
-li:nth-child(n+2) {
-  list-style-type: none;
-}
